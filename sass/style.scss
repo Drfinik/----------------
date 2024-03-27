@@ -27,12 +27,13 @@ a {
     height: 700px;
     background-image: url(/img/background-header.png);
     background-repeat: no-repeat;
+    padding: 0 72px;
 
 }
 
 .logo {
     display: flex;
-    padding: 26px 0 0 72px;
+    padding-top: 26px;
     gap: 6.35px;
 
     &_text {
@@ -49,7 +50,7 @@ a {
 
 .top__info {
     max-width: 542px;
-    margin: 62px 0 0 72px;
+    margin-top: 62px;
 
     &_header {
         font-family: Merriweather;
@@ -117,12 +118,38 @@ a {
     }
 }
 
+
 .running__line {
     width: 100%;
     height: 60px;
     background: red;
-}
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
 
+    &_text {
+        color: rgb(255, 255, 255);
+        font-family: Merriweather;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0px;
+        text-align: right;
+        text-transform: uppercase;
+        display: inline-block;
+        animation: marquee1 20s infinite linear;
+        animation-delay: -10s;
+    }   
+    
+}
+@keyframes marquee1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 .advertisement {
     padding: 80px 72px 0 72px;
     display: flex;
@@ -259,11 +286,15 @@ a {
     }
 
     &__cards {
+        margin-bottom: 28px;
         margin-top: 54px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 100px;
         grid-gap: 25px;
+        position: relative;
+
+
 
         &_card {
             background-color: #e6d9c7;
@@ -300,8 +331,8 @@ a {
 
             &-img {
                 position: absolute;
-                left: 460px;
-                top: -80px;
+                left: 890px;
+                top: 150px;
             }
 
 
@@ -329,17 +360,21 @@ a {
         }
 
         &_card-7 {
-            position: relative;
             width: 813px;
             height: 136px;
             grid-column-end: span 2;
+        }
+
+        &_card-1-2,
+        &_card-4-5 {
+            display: none;
         }
 
 
     }
 }
 
-.participants {
+.participants {   
     padding: 250px 40px 140px 72px;
 
     &__top {
@@ -359,7 +394,7 @@ a {
             text-transform: uppercase;
         }
 
-        &_nav {
+        &_nav {            
             display: flex;
             align-items: center;
             gap: 10px;
@@ -501,6 +536,7 @@ a {
     .header {
         height: 812px;
         background-image: url(/img/background-header-375px.png);
+        padding: 0 20px;
     }
 
     .logo {
@@ -515,8 +551,8 @@ a {
     }
 
     .top__info {
-        max-width: 335px;
-        margin: 40px 0 0 20px;
+        max-width: 315px;
+        margin-top: 40px;
 
         &_header {
             font-size: 36px;
@@ -532,7 +568,7 @@ a {
         }
 
         &_btn {
-            width: 335px;
+            width: 315px;
             height: 47px;
             padding: 6px;
         }
@@ -558,7 +594,7 @@ a {
 
 
         &__left {
-            max-width: 335px;
+            max-width: 315px;
 
             &_text {
                 font-size: 28px;
@@ -567,7 +603,7 @@ a {
 
             &_block {
                 display: block;
-                width: 335px;
+                width: 315px;
             }
 
         }
@@ -586,11 +622,12 @@ a {
         display: block;
 
         &_img {
-            width: 335px;
+            width: 315px;
         }
 
         &__right {
             &_header {
+                width: 315px;
                 font-size: 28px;
             }
 
@@ -600,7 +637,7 @@ a {
             }
 
             &_text {
-                width: 335px;
+                width: 315px;
                 display: flex;
                 flex-direction: column;
                 border-bottom: 2px solid rgb(208, 208, 208);
@@ -619,7 +656,7 @@ a {
             }
 
             &_footnote {
-                width: 335px;
+                width: 315px;
                 font-size: 18px;
             }
         }
@@ -628,11 +665,12 @@ a {
     .stages {
         padding: 65px 20px 0 20px;
 
+
         &__headers {
             flex-direction: column;
             align-items: start;
 
-            max-width: 335px;
+            max-width: 315px;
 
             &_header {
                 font-size: 36px;
@@ -641,6 +679,7 @@ a {
 
             &_text {
                 font-size: 18px;
+                margin-bottom: 148px;
             }
 
 
@@ -648,82 +687,110 @@ a {
 
         &__cards {
             margin-top: 54px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 100px;
-            grid-gap: 25px;
+            display: flex;
+            gap: 20px;
 
             &_card {
-                background-color: #e6d9c7;
-                display: flex;
-                padding-top: 20px;
-                padding-left: 20px;
-                padding-bottom: 20px;
-                gap: 16px;
-
-                &-circle {
-                    width: 36px;
-                    height: 36px;
-                    padding: 4px 12px;
-                    color: rgb(49, 49, 49);
-                    font-family: Golos Text;
-                    font-size: 20px;
-                    font-weight: 600;
-                    line-height: 120%;
-                    letter-spacing: 0px;
-                    text-align: left;
-                    border-radius: 60px;
-                    background: rgb(255, 255, 255);
-
-                }
+                padding-top: 62px;
 
                 &-text {
-                    font-family: Golos Text;
-                    font-size: 20px;
-                    font-weight: 500;
-                    line-height: 24px;
-                    text-align: left;
+                    width: 243px;
+                    font-size: 18px;
 
                 }
 
                 &-img {
+                    width: 335px;
                     position: absolute;
-                    left: 460px;
-                    top: -80px;
+                    left: 0px;
+                    top: -136px;
+
                 }
 
 
+            }
+
+            &_card-none {
+                display: none;
+            }
+
+            &_card-1-2 {
+                display: none;
+
+            }
+
+
+            &_card-3,
+            &_card-6,
+            &_card-7,
+            &_card-1-2,
+            &_card-4-5 {
+                width: 315px;
+                height: 300px;
+
+            }
+
+            &_card-3 {
+                display: flex;
+            }
+
+            &_card-6,
+            &_card-7,
+            &_card-4-5 {
+                display: none;
+
+            }
+
+            &_card-2,
+            &_card-5 {
+                padding-top: 28px;
             }
 
             &_card-1,
             &_card-2,
             &_card-4,
-            &_card-5,
-            &_card-6 {
-                width: 394px;
-                height: 112px;
-                grid-column-end: span 1;
+            &_card-5 {
+                width: 315px;
+                height: 150px;
             }
-
-            &_card-6 {
-                height: 136px;
-            }
-
-            &_card-3 {
-                width: 394px;
-                height: 224px;
-                grid-column-end: span 1;
-                grid-row-end: span 2;
-            }
-
-            &_card-7 {
-                position: relative;
-                width: 813px;
-                height: 136px;
-                grid-column-end: span 2;
-            }
-
 
         }
     }
+    .participants {
+        padding: 120px 20px 140px 20px;
+        position: relative;
+    
+        &__top {
+            &_header {
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 110%;
+            }
+    
+            &_nav {
+                position: absolute;
+                top: 765px;
+                left: 100px;
+            }
+        }
+    
+        &__cards {
+    
+            &_card {
+                width: 315px;
+    
+            }
+        }
+    }
+    
+    .footer {
+        padding: 78px 20px 60px 20px;
+        background-color: #E9DED4;
+    
+        &_text {
+            width: 318px;
+        }
+    }
+
 }
+
