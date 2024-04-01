@@ -67,6 +67,7 @@ a {
   color: #313131;
 }
 .top__info_btn {
+  display: inline-block;
   width: 263px;
   height: 72px;
   margin-top: 40px;
@@ -305,6 +306,77 @@ a {
 .stages__cards_card-1-2, .stages__cards_card-4-5 {
   display: none;
 }
+.stages__nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.stages__nav-btn1 {
+  width: 44px;
+  height: 44px;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+.stages__nav-btn1:hover {
+  border: 2px solid #FBCE51;
+  background-color: #FBCE51;
+}
+.stages__nav-value {
+  font-family: Golos Text;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+}
+.stages__nav-btn2 {
+  width: 44px;
+  height: 44px;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+.stages__nav-btn2:hover {
+  border: 2px solid #FBCE51;
+  background-color: #FBCE51;
+}
+.stages__nav-btn1::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(45deg);
+}
+.stages__nav-btn2::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(-135deg);
+}
+.stages__nav_indicator {
+  display: flex;
+  gap: 6px;
+}
+.stages__nav_indicator-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(217, 217, 217);
+}
 
 .participants {
   padding: 250px 40px 140px 72px;
@@ -389,8 +461,11 @@ a {
   display: flex;
   gap: 20px;
 }
-.participants__cards_card {
+.participants__cards_card.active {
   display: flex;
+}
+.participants__cards_card {
+  display: none;
   flex-direction: column;
   align-items: center;
   width: 394px;
@@ -444,7 +519,7 @@ a {
   text-align: left;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 376px) {
   .header {
     height: 812px;
     background-image: url(/img/background-header-375px.png);
@@ -459,7 +534,7 @@ a {
     font-size: 14.42px;
   }
   .top__info {
-    max-width: 315px;
+    max-width: 335px;
     margin-top: 40px;
   }
   .top__info_header {
@@ -473,7 +548,7 @@ a {
     text-align: left;
   }
   .top__info_btn {
-    width: 315px;
+    width: 335px;
     height: 47px;
     padding: 6px;
   }
@@ -491,7 +566,7 @@ a {
     display: block;
   }
   .advertisement__left {
-    max-width: 315px;
+    max-width: 335px;
   }
   .advertisement__left_text {
     font-size: 28px;
@@ -499,7 +574,7 @@ a {
   }
   .advertisement__left_block {
     display: block;
-    width: 315px;
+    width: 335px;
   }
   .advertisement__right {
     display: none;
@@ -512,10 +587,10 @@ a {
     display: block;
   }
   .schedule_img {
-    width: 315px;
+    width: 335px;
   }
   .schedule__right_header {
-    width: 315px;
+    width: 335px;
     font-size: 28px;
   }
   .schedule__right_table {
@@ -523,7 +598,7 @@ a {
     margin-bottom: 40px;
   }
   .schedule__right_text {
-    width: 315px;
+    width: 335px;
     display: flex;
     flex-direction: column;
     border-bottom: 2px solid rgb(208, 208, 208);
@@ -536,7 +611,7 @@ a {
     padding: 0 0 16px 0;
   }
   .schedule__right_footnote {
-    width: 315px;
+    width: 335px;
     font-size: 18px;
   }
   .stages {
@@ -545,7 +620,7 @@ a {
   .stages__headers {
     flex-direction: column;
     align-items: start;
-    max-width: 315px;
+    max-width: 335px;
   }
   .stages__headers_header {
     font-size: 36px;
@@ -580,7 +655,7 @@ a {
     display: none;
   }
   .stages__cards_card-3, .stages__cards_card-6, .stages__cards_card-7, .stages__cards_card-1-2, .stages__cards_card-4-5 {
-    width: 315px;
+    width: 335px;
     height: 300px;
   }
   .stages__cards_card-3 {
@@ -593,8 +668,12 @@ a {
     padding-top: 28px;
   }
   .stages__cards_card-1, .stages__cards_card-2, .stages__cards_card-4, .stages__cards_card-5 {
-    width: 315px;
+    width: 335px;
     height: 150px;
+  }
+  .stages__nav {
+    max-width: 335px;
+    display: flex;
   }
   .participants {
     padding: 120px 20px 140px 20px;
@@ -611,7 +690,7 @@ a {
     left: 100px;
   }
   .participants__cards_card {
-    width: 315px;
+    width: 335px;
   }
   .footer {
     padding: 78px 20px 60px 20px;

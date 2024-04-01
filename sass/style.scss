@@ -78,6 +78,7 @@ a {
     }
 
     &_btn {
+        display: inline-block;
         width: 263px;
         height: 72px;
         margin-top: 40px;
@@ -372,6 +373,85 @@ a {
 
 
     }
+    &__nav {            
+        display: none;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        &-btn1 {
+            width: 44px;
+            height: 44px;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 50%;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        &-btn1:hover {
+            border: 2px solid #FBCE51;
+            background-color: #FBCE51;
+        }
+
+
+        &-value {
+            font-family: Golos Text;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: left;
+        }
+
+        &-btn2 {
+            width: 44px;
+            height: 44px;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 50%;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        &-btn2:hover {
+            border: 2px solid #FBCE51;
+            background-color: #FBCE51;
+        }
+
+        &-btn1::before {
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 12px;
+            width: 16px;
+            height: 16px;
+            border-left: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+            transform: rotate(45deg);
+        }
+
+        &-btn2::before {
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 9px;
+            width: 16px;
+            height: 16px;
+            border-left: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+            transform: rotate(-135deg);
+        }
+        &_indicator {
+            display: flex;
+            gap: 6px;
+            &-item {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: rgb(217, 217, 217);
+            }
+        }
+    }
 }
 
 .participants {   
@@ -467,9 +547,12 @@ a {
     &__cards {
         display: flex;
         gap: 20px;
+        &_card.active {
+            display: flex;
+        }
 
         &_card {
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             width: 394px;
@@ -532,7 +615,7 @@ a {
     }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 376px) {
     .header {
         height: 812px;
         background-image: url(/img/background-header-375px.png);
@@ -551,7 +634,7 @@ a {
     }
 
     .top__info {
-        max-width: 315px;
+        max-width: 335px;
         margin-top: 40px;
 
         &_header {
@@ -568,7 +651,7 @@ a {
         }
 
         &_btn {
-            width: 315px;
+            width: 335px;
             height: 47px;
             padding: 6px;
         }
@@ -594,7 +677,7 @@ a {
 
 
         &__left {
-            max-width: 315px;
+            max-width: 335px;
 
             &_text {
                 font-size: 28px;
@@ -603,7 +686,7 @@ a {
 
             &_block {
                 display: block;
-                width: 315px;
+                width: 335px;
             }
 
         }
@@ -622,12 +705,12 @@ a {
         display: block;
 
         &_img {
-            width: 315px;
+            width: 335px;
         }
 
         &__right {
             &_header {
-                width: 315px;
+                width: 335px;
                 font-size: 28px;
             }
 
@@ -637,7 +720,7 @@ a {
             }
 
             &_text {
-                width: 315px;
+                width: 335px;
                 display: flex;
                 flex-direction: column;
                 border-bottom: 2px solid rgb(208, 208, 208);
@@ -656,7 +739,7 @@ a {
             }
 
             &_footnote {
-                width: 315px;
+                width: 335px;
                 font-size: 18px;
             }
         }
@@ -670,7 +753,7 @@ a {
             flex-direction: column;
             align-items: start;
 
-            max-width: 315px;
+            max-width: 335px;
 
             &_header {
                 font-size: 36px;
@@ -725,7 +808,7 @@ a {
             &_card-7,
             &_card-1-2,
             &_card-4-5 {
-                width: 315px;
+                width: 335px;
                 height: 300px;
 
             }
@@ -750,10 +833,15 @@ a {
             &_card-2,
             &_card-4,
             &_card-5 {
-                width: 315px;
+                width: 335px;
                 height: 150px;
             }
 
+        }
+        &__nav {
+            max-width: 335px;
+            display: flex;
+            
         }
     }
     .participants {
@@ -777,7 +865,7 @@ a {
         &__cards {
     
             &_card {
-                width: 315px;
+                width: 335px;
     
             }
         }
