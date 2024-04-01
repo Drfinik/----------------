@@ -25,7 +25,7 @@ a {
 
 .header {
     height: 700px;
-    background-image: url(/img/background-header.png);
+    background-image: url(./img/background-header.png);
     background-repeat: no-repeat;
     padding: 0 72px;
 
@@ -618,7 +618,7 @@ a {
 @media (max-width: 376px) {
     .header {
         height: 812px;
-        background-image: url(/img/background-header-375px.png);
+        background-image: url(./img/background-header-375px.png);
         padding: 0 20px;
     }
 
