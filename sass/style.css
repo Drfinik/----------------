@@ -444,7 +444,7 @@ a {
   text-align: left;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 431px) {
   .header {
     height: 812px;
     background-image: url(/img/background-header-375px.png);
