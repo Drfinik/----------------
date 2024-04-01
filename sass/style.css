@@ -22,7 +22,7 @@ a {
 
 .header {
   height: 700px;
-  background-image: url(./img/background-header.png);
+  background-image: url(/img/background-header.png);
   background-repeat: no-repeat;
   padding: 0 72px;
 }
@@ -522,7 +522,7 @@ a {
 @media (max-width: 376px) {
   .header {
     height: 812px;
-    background-image: url(./img/background-header-375px.png);
+    background-image: url(/img/background-header-375px.png);
     padding: 0 20px;
   }
   .logo {
@@ -560,6 +560,9 @@ a {
   }
   .top__info_btn2 br {
     display: none;
+  }
+  .running__line {
+    max-width: 375px;
   }
   .advertisement {
     padding: 48px 20px 0 20px;
@@ -693,6 +696,7 @@ a {
     width: 335px;
   }
   .footer {
+    max-width: 375px;
     padding: 78px 20px 60px 20px;
     background-color: #E9DED4;
   }

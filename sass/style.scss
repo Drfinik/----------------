@@ -25,7 +25,7 @@ a {
 
 .header {
     height: 700px;
-    background-image: url(./img/background-header.png);
+    background-image: url(/img/background-header.png);
     background-repeat: no-repeat;
     padding: 0 72px;
 
@@ -618,7 +618,7 @@ a {
 @media (max-width: 376px) {
     .header {
         height: 812px;
-        background-image: url(./img/background-header-375px.png);
+        background-image: url(/img/background-header-375px.png);
         padding: 0 20px;
     }
 
@@ -668,6 +668,9 @@ a {
             }
         }
 
+    }
+    .running__line {
+        max-width: 375px;
     }
 
     .advertisement {
@@ -872,6 +875,7 @@ a {
     }
     
     .footer {
+        max-width: 375px;
         padding: 78px 20px 60px 20px;
         background-color: #E9DED4;
     
